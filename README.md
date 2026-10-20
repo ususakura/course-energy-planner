@@ -46,6 +46,16 @@
 
 > 请把课程和任务放进同一个周日历，并增加项目甘特图。点击任务可以看详情和材料，完成后可以勾选。布局紧凑，尽量一屏看完全天安排。
 
+## 日历联动（含 Google Calendar）
+
+可以以你指定的外部日历为准：先读取已有约定和手动调整，再更新周计划与看板。保留完成记录、材料和休息空档，避免重复创建日程。Google Calendar 另提供账号与日历选择、时区、重复课程及同步失败处理指南。
+
+开始时可以说：
+
+> 请用 $course-energy-planner 联动我的 Google Calendar。先读取未来两周安排，以我在日历里手动调整的时间为准，更新周计划。把建议工作时段写入我指定的学习日历，保留完成记录和材料链接；目标日历不明确时再问我。
+
+[查看 Google Calendar 联动指南](course-energy-planner/references/google-calendar.md)。安装 Skill 本身不会建立账号连接或启动后台同步；读取、写入和定时更新取决于你授权的工具与实际配置。一次性 `.ics` 导入也不等于双向同步。
+
 ## 使用边界
 
 这是可复用的规划方法，不是已经部署好的网站。网页、持久存储和定时维护需要另行配置，并取决于当前环境可用的工具。它不会仅因安装就自动读取学校账号、运行提醒或提交作业。课程来源需要你提供并授权访问；无法核实的内容会保留为待确认。
@@ -54,6 +64,7 @@
 
 - `course-energy-planner/SKILL.md`：主要工作方法。
 - `course-energy-planner/references/data-and-updates.md`：共享视图、完成记录和持续更新规则。
+- `course-energy-planner/references/google-calendar.md`：Google Calendar 联动与能力边界。
 - `course-energy-planner/assets/example-plan.json`：虚构的结构化计划示例。
 - `course-energy-planner/scripts/check_plan.py`：只读检查时间冲突、容量和安排缺口。
 
