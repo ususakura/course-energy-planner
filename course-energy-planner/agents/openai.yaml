@@ -1,0 +1,4 @@
+interface:
+  display_name: "课程与精力规划"
+  short_description: "整合课程与作业，依据实际工时和精力偏好安排周计划、项目节点与启动提示"
+  default_prompt: "请用 $course-energy-planner 整理我的课表和作业，核对截止时间与实际进度，先给可执行的周计划。"
