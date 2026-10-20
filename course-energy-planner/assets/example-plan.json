@@ -1,0 +1,140 @@
+{
+  "example_notice": "完全虚构的示例；时长、时区、课程与链接不代表任何真实使用者。",
+  "schema_version": 1,
+  "timezone": "Etc/UTC",
+  "horizon": {
+    "start": "2030-04-01",
+    "end": "2030-04-07"
+  },
+  "preferences": {
+    "work_minutes_ceiling": 180,
+    "classes_count": false
+  },
+  "tasks": [
+    {
+      "id": "task-reading-a",
+      "title": "交互阅读与札记",
+      "course_id": "course-a",
+      "formal_due": "2030-04-03T17:00:00+00:00",
+      "personal_target": "2030-04-02",
+      "components": [
+        {
+          "id": "reading",
+          "kind": "reading",
+          "remaining_minutes": {
+            "low": 60,
+            "high": 90
+          },
+          "basis": "助手暂估，完成后校准"
+        },
+        {
+          "id": "body",
+          "kind": "writing",
+          "remaining_minutes": {
+            "low": 45,
+            "high": 45
+          },
+          "basis": "虚构学习者报告：类似正文通常45分钟"
+        },
+        {
+          "id": "submit",
+          "kind": "submission",
+          "remaining_minutes": {
+            "low": 15,
+            "high": 20
+          },
+          "basis": "助手暂估"
+        }
+      ],
+      "resources": [
+        {
+          "label": "虚构材料入口",
+          "url": "https://example.org/course-a/reading",
+          "access_status": "example_only"
+        }
+      ]
+    },
+    {
+      "id": "task-prototype-b",
+      "title": "互动原型",
+      "course_id": "course-b",
+      "formal_due": "2030-04-06",
+      "components": [
+        {
+          "id": "core",
+          "kind": "implementation",
+          "remaining_minutes": {
+            "low": 180,
+            "high": 240
+          },
+          "basis": "助手暂估"
+        },
+        {
+          "id": "test",
+          "kind": "testing",
+          "remaining_minutes": {
+            "low": 60,
+            "high": 90
+          },
+          "basis": "助手暂估"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "id": "class-a-1",
+      "kind": "class",
+      "start": "2030-04-01T09:00:00+00:00",
+      "end": "2030-04-01T11:00:00+00:00"
+    },
+    {
+      "id": "session-reading",
+      "kind": "work",
+      "task_id": "task-reading-a",
+      "component_id": "reading",
+      "start": "2030-04-01T13:00:00+00:00",
+      "end": "2030-04-01T14:00:00+00:00"
+    },
+    {
+      "id": "session-core-1",
+      "kind": "work",
+      "task_id": "task-prototype-b",
+      "component_id": "core",
+      "start": "2030-04-01T15:00:00+00:00",
+      "end": "2030-04-01T17:00:00+00:00"
+    },
+    {
+      "id": "session-body",
+      "kind": "work",
+      "task_id": "task-reading-a",
+      "component_id": "body",
+      "start": "2030-04-02T13:00:00+00:00",
+      "end": "2030-04-02T13:45:00+00:00"
+    },
+    {
+      "id": "session-submit",
+      "kind": "work",
+      "task_id": "task-reading-a",
+      "component_id": "submit",
+      "start": "2030-04-02T14:00:00+00:00",
+      "end": "2030-04-02T14:15:00+00:00"
+    },
+    {
+      "id": "session-core-2",
+      "kind": "work",
+      "task_id": "task-prototype-b",
+      "component_id": "core",
+      "start": "2030-04-04T13:00:00+00:00",
+      "end": "2030-04-04T14:00:00+00:00"
+    },
+    {
+      "id": "session-test",
+      "kind": "work",
+      "task_id": "task-prototype-b",
+      "component_id": "test",
+      "start": "2030-04-05T13:00:00+00:00",
+      "end": "2030-04-05T14:00:00+00:00"
+    }
+  ]
+}
